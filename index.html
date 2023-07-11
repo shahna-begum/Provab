@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Ticketer | Go on A Trip!!!</title>
+    <link rel="icon" href="./assets/images/logo-new.png" sizes="64x64" type="image/png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+        integrity="sha512-rqQltXRuHxtPWhktpAZxLHUVJ3Eombn3hvk9PHjV/N5DMUYnzKPC1i3ub0mEXgFzsaZNeJcoE0YHq0j/GFsdGg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+    <div class="whole-wrapper container-fluid pe-0 ps-0">
+        <section class="hero-section pt-0 p-0">
+            <header class="">
+                <nav class="container navbar navbar-expand-lg pt-0 h-100">
+                    <div class="container-fluid pe-0 ps-0">
+                        <a class="navbar-brand" href="#"><img src="./assets/images/logo-new.png" width="180px" /></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Flight</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Hotels</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Contact Us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">More</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="ms-auto header-btn-wrapper">
+                            <div>
+                                <button type="button"><i class="fas fa-rupee-sign"></i></button>
+                                <button type="button"><i class="fas fa-globe"></i></button>
+                            </div>
+                            <div>
+                                <a href="#"><button type="button">Login /</button></a>
+                                <a href="#"><button type="button">Register</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <section class="container">
+                <div class="conatiner alert alert-dismissible fade show p-0" role="alert">
+                    <div>
+                        <div class="bell-div">
+                            <i class="fas fa-bell"></i>
+                        </div>
+                        <div class="content-div">
+                            <h2>travel agency alert</h2>
+                            <p class="pb-0 sub-text mb-0">some new travel deals and offres notification.</p>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="hero-content-wrapper">
+                    <form>
+                        <div>
+                            <h1 class="hero-heading top-heading">Plan your <span class="first-text">Trip</span></h1>
+                            <div class="trip-info-wrapper">
+                                <div>
+                                    <input type="radio" id="one-way" name="trip-type" checked />
+                                    <label for="one-way">One way</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="return" name="trip-type" />
+                                    <label for="return">return</label>
+
+                                </div>
+                                <div>
+                                    <input type="radio" id="multi-way" name="trip-type" />
+                                    <label for="multi-way">multi way</label>
+                                </div>
+                            </div>
+                            <div class="trip-info-card-wrapper">
+                                <div class="card one-way">
+                                    <div>
+                                        <label>From</label>
+                                        <!-- <select class="js-example-basic-single" name="state">
+                                            <option value="AL">Alabama</option>
+                                            <option value="AL">Alabama</option>
+                                            <option value="WY">Wyoming</option>
+                                        </select> -->
+                                        <h6 class="place">New Delhi</h6>
+                                        <span>DEL, Delhi Airport India</span>
+                                    </div>
+                                    <div>
+                                        <label>to</label>
+                                        <!-- <select class="js-example-basic-single" name="state">
+                                            <option value="AL">Alabama</option>
+                                            <option value="AL">Alabama</option>
+                                            <option value="WY">Wyoming</option>
+                                        </select> -->
+                                        <h6 class="place">London</h6>
+                                        <span>LHR, Healthrow Airport</span>
+                                    </div>
+                                    <div>
+                                        <label>Departure</label>
+                                        <!-- <input type="date" /> -->
+                                        <h6 class="place">07 Aug 2022</h6>
+                                        <span>Sunday</span>
+                                    </div>
+                                    <div>
+                                        <label>Return</label>
+                                        <!-- <input type="date" /> -->
+                                        <h6 class="place">09 Aug 2022</h6>
+                                        <span>Tue</span>
+                                    </div>
+                                    <div>
+                                        <label>Travellers</label>
+                                        <select class="js-example-basic-single" name="state">
+                                            <option value="AL">Alabama</option>
+                                            <option value="AL">Alabama</option>
+                                            <option value="WY">Wyoming</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label>Class</label>
+                                        <select class="js-class-type" name="class-type">
+                                            <option value="AL">Select Class</option>
+                                            <option value="AL">Economy</option>
+                                            <option value="WY">Business</option>
+                                        </select>
+                                    </div>
+                                    <select class="js-epreferred-airline" name="preferred-airline">
+                                        <option value="PA">preferred Airline</option>
+                                        <option value="AL">Qatar Airline</option>
+                                        <option value="AL">Alabama</option>
+                                        <option value="WY">Wyoming</option>
+                                    </select>
+                                    <button type="button" class="search-flight-btn">Search Flight</button>
+                                </div>
+                                <div class="card return">
+                                    <div>
+                                        <label>From</label>
+                                        <!-- <select class="js-example-basic-single" name="state">
+                                            <option value="AL">Alabama</option>
+                                            <option value="AL">Alabama</option>
+                                            <option value="WY">Wyoming</option>
+                                        </select> -->
+                                        <h6 class="place">London</h6>
+                                        <span>LHR, Healthrow Airport</span>
+                                    </div>
+                                    <div>
+                                        <label>to</label>
+                                        <!-- <select class="js-example-basic-single" name="state">
+                                            <option value="AL">Alabama</option>
+                                            <option value="AL">Alabama</option>
+                                            <option value="WY">Wyoming</option>
+                                        </select> -->
+
+                                        <h6 class="place">New Delhi</h6>
+                                        <span>DEL, Delhi Airport India</span>
+                                    </div>
+                                    <div>
+                                        <label>Departure</label>
+                                        <!-- <input type="date" /> -->
+                                        <h6 class="place">17 Aug 2022</h6>
+                                        <span>Sunday</span>
+                                    </div>
+                                    <div>
+                                        <label>Return</label>
+                                        <!-- <input type="date" /> -->
+                                        <h6 class="place">29 Aug 2022</h6>
+                                        <span>Tue</span>
+                                    </div>
+                                    <div>
+                                        <label>Travellers</label>
+                                        <div class="count-up-down">
+                                            <div>
+                                                <h3>Adult</h3>
+                                                <div id="field1">
+                                                    <button type="button" id="sub" class="minus">-</button>
+                                                    <input type="number" id="1" value="1" min="1" class='quantity'
+                                                        max="10" />
+                                                    <button type="button" id="add" class="plus">+</button>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h3>Child</h3>
+                                                <div id="field1">
+                                                    <button type="button" id="sub" class="minus">-</button>
+                                                    <input type="number" id="1" value="1" min="1" class='quantity'
+                                                        max="10" />
+                                                    <button type="button" id="add" class="plus">+</button>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h3>Infant</h3>
+                                                <div id="field1">
+                                                    <button type="button" id="sub" class="minus">-</button>
+                                                    <input type="number" id="1" value="1" min="1" class='quantity'
+                                                        max="10" />
+                                                    <button type="button" id="add" class="plus">+</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div>
+                                        <label>Class</label>
+                                        <select class="js-class-type" name="class-type">
+                                            <option value="AL">Select Class</option>
+                                            <option value="AL">Economy</option>
+                                            <option value="WY">Business</option>
+                                        </select>
+                                    </div>
+                                    <select class="js-epreferred-airline" name="preferred-airline">
+                                        <option value="PA">preferred Airline</option>
+                                        <option value="AL">Qatar Airline</option>
+                                        <option value="AL">Alabama</option>
+                                        <option value="WY">Wyoming</option>
+                                    </select>
+                                    <button type="button" class="search-flight-btn">Search Flight</button>
+                                </div>
+                                <div class="card multi-way">
+                                    <div>
+                                        <label>From</label>
+                                        <!-- <select class="js-example-basic-single" name="state">
+                                            <option value="AL">Alabama</option>
+                                            <option value="AL">Alabama</option>
+                                            <option value="WY">Wyoming</option>
+                                        </select> -->
+                                        <h6 class="place">New Delhi</h6>
+                                        <span>DEL, Delhi Airport India</span>
+                                    </div>
+                                    <div>
+                                        <label>to</label>
+                                        <!-- <select class="js-example-basic-single" name="state">
+                                            <option value="AL">Alabama</option>
+                                            <option value="AL">Alabama</option>
+                                            <option value="WY">Wyoming</option>
+                                        </select> -->
+                                        <h6 class="place">London</h6>
+                                        <span>LHR, Healthrow Airport</span>
+                                    </div>
+                                    <div>
+                                        <label>Departure</label>
+                                        <!-- <input type="date" /> -->
+                                        <h6 class="place">06 Aug 2022</h6>
+                                        <span>Sunday</span>
+                                    </div>
+                                    <div>
+                                        <label>Return</label>
+                                        <!-- <input type="date" /> -->
+                                        <h6 class="place">19 Aug 2022</h6>
+                                        <span>Tue</span>
+                                    </div>
+                                    <div>
+                                        <label>Travellers</label>
+                                        <select class="js-example-basic-single" name="state">
+                                            <option value="AL">Alabama</option>
+                                            <option value="AL">Alabama</option>
+                                            <option value="WY">Wyoming</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label>Class</label>
+                                        <select class="js-class-type" name="class-type">
+                                            <option value="AL">Select Class</option>
+                                            <option value="AL">Economy</option>
+                                            <option value="WY">Business</option>
+                                        </select>
+                                    </div>
+                                    <select class="js-epreferred-airline" name="preferred-airline">
+                                        <option value="PA">preferred Airline</option>
+                                        <option value="AL">Qatar Airline</option>
+                                        <option value="AL">Alabama</option>
+                                        <option value="WY">Wyoming</option>
+                                    </select>
+                                    <button type="button" class="search-flight-btn">Search Flight</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="owl-carousel hero-carousel">
+                        <img src="./assets/images/hotel-01.jpg" class="img-fluid" alt="Queenstown ,New Zealand"
+                            loading="lazy" />
+                        <img src="./assets/images/hotel-01.jpg" class="img-fluid" alt="Queenstown ,New Zealand"
+                            loading="lazy" />
+                        <img src="./assets/images/hotel-01.jpg" class="img-fluid" alt="Queenstown ,New Zealand"
+                            loading="lazy" />
+                        <img src="./assets/images/hotel-01.jpg" class="img-fluid" alt="Queenstown ,New Zealand"
+                            loading="lazy" />
+                        <img src="./assets/images/hotel-01.jpg" class="img-fluid" alt="Queenstown ,New Zealand"
+                            loading="lazy" />
+                        <img src="./assets/images/hotel-01.jpg" class="img-fluid" alt="Queenstown ,New Zealand"
+                            loading="lazy" />
+                        <img src="./assets/images/hotel-01.jpg" class="img-fluid" alt="Queenstown ,New Zealand"
+                            loading="lazy" />
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section class="explore-section">
+            <div class="container">
+                <h1 class="top-heading"><span class="first-text">Exploring</span> the World in Comfort with Travel</h1>
+                <p class="sub-text">Discuss your goals determines success metrices identity solution Discuss your goals
+                </p>
+                <div class="explore-places-wrapper">
+                    <div class="item">
+                        <img src="./assets/images/explore-01.jpg" class="img-fluid" alt="Queenstown ,New Zealand"
+                            loading="lazy" />
+                        <h1 class="mb-0 explore-count">05</h1>
+                        <h3 class="explore-place-nm">Queenstown ,New Zealand</h3>
+                    </div>
+                    <div class="item">
+                        <img src="./assets/images/explore-02.jpg" class="img-fluid" alt="Queenstown ,New Zealand"
+                            loading="lazy" />
+                        <h1 class="mb-0 explore-count">01</h1>
+                        <h3 class="explore-place-nm">Ras Al khaimah ,UAE </h3>
+                    </div>
+                    <div class="item">
+                        <img src="./assets/images/explore-03.jpg" class="img-fluid" alt="Queenstown ,New Zealand"
+                            loading="lazy" />
+                        <h1 class="mb-0 explore-count"> 02</h1>
+                        <h3 class="explore-place-nm">Park City ,Utah</h3>
+                    </div>
+                    <div class="item">
+                        <img src="./assets/images/explore-04.jpg" class="img-fluid" alt="Queenstown ,New Zealand"
+                            loading="lazy" />
+                        <h1 class="mb-0 explore-count"> 03</h1>
+                        <h3 class="explore-place-nm">Great Barrier reef ,Australia </h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="hotel-section">
+            <div class="container hotel-wrapper">
+                <h1 class="top-heading">Top Hotel <span class="first-text">Destinations</span> </h1>
+                <p class="sub-text">Discuss your goals determines success metrices identity solution Discuss your goals
+                    <br />determines success metrices identity solution Discuss your goals
+                </p>
+                <!-- Set up your HTML -->
+                <div class="owl-carousel hotel-carousel">
+                    <div>
+                        <div class="location-wrapper">
+                            <div class="location-icon-warpper">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <p class="mb-0">Porland</p>
+                        </div>
+                        <h6 class="short-text">All are welcome , Ore</h6>
+                        <div class="img-wrapper">
+                            <span class="offer">24% off</span>
+                            <img src="./assets/images/hotel-01.jpg" class="img-fluid" alt="Queenstown ,New Zealand"
+                                loading="lazy" />
+                        </div>
+                        <div class="rating-wrapper">
+                            <div>
+                                <span class="amount">$1399.00</span>
+                                <div class="rating-div">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <button type="button" class="view-details-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="location-wrapper">
+                            <div class="location-icon-warpper">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <p class="mb-0">Uzbekistan</p>
+                        </div>
+                        <h6 class="short-text">Historic Silk Road Sites</h6>
+                        <div class="img-wrapper">
+                            <span class="offer">30% off</span>
+                            <img src="./assets/images/hotel-02.jpg" class="img-fluid" alt="Queenstown ,New Zealand"
+                                loading="lazy" />
+                        </div>
+                        <div class="rating-wrapper">
+                            <div>
+                                <span class="amount">$1599.00</span>
+                                <div class="rating-div">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <button type="button" class="view-details-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="location-wrapper">
+                            <div class="location-icon-warpper">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <p class="mb-0">United States</p>
+                        </div>
+                        <h6 class="short-text">The Grand Palace , Las Vegas</h6>
+                        <div class="img-wrapper">
+                            <span class="offer">35% off</span>
+                            <img src="./assets/images/hotel-03.jpg" class="img-fluid" alt="Queenstown ,New Zealand"
+                                loading="lazy" />
+                        </div>
+                        <div class="rating-wrapper">
+                            <div>
+                                <span class="amount">$1199.00</span>
+                                <div class="rating-div">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <button type="button" class="view-details-btn">View Details</button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="location-wrapper">
+                            <div class="location-icon-warpper">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <p class="mb-0">India</p>
+                        </div>
+                        <h6 class="short-text">Dilli Meri Jaan</h6>
+                        <div class="img-wrapper">
+                            <span class="offer">20% off</span>
+                            <img src="./assets/images/hotel-01.jpg" class="img-fluid" alt="Queenstown ,New Zealand"
+                                loading="lazy" />
+                        </div>
+                        <div class="rating-wrapper">
+                            <div>
+                                <span class="amount">$1799.00</span>
+                                <div class="rating-div">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <button type="button" class="view-details-btn">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="why-air-ticketer-section">
+            <div class="container">
+                <h1 class="top-heading">Why <span class="first-text">Air</span> Ticketer</h1>
+                <p class="sub-text">Discuss your goals determines success metrices identity solution</p>
+                <div class="why-air-ticketer-wrapper">
+                    <div class="item">
+                        <img src="./assets/images/why-at-01.png" class="img-fluid" alt="Queenstown ,New Zealand"
+                            loading="lazy" />
+                        <h3 class="air-ticketer-heading">Best services</h3>
+                        <p class="air-ticketer-subtext">A versitile plateform where you can easily register and book
+                            your
+                            travel requirements in 3 simple steps.</p>
+                    </div>
+                    <div class="item">
+                        <img src="./assets/images/why-at-02.png" class="img-fluid" alt="Queenstown ,New Zealand"
+                            loading="lazy" />
+                        <h3 class="air-ticketer-heading">amazing deals</h3>
+                        <p class="air-ticketer-subtext">We provide amazing deals and travel destination if yu want to
+                            know
+                            all about deals go through our offers.</p>
+                    </div>
+                    <div class="item">
+                        <img src="./assets/images/why-at-03.png" class="img-fluid" alt="Queenstown ,New Zealand"
+                            loading="lazy" />
+                        <h3 class="air-ticketer-heading"> afordable pricing</h3>
+                        <p class="air-ticketer-subtext">Affordable pricing offers in travel deals for everyone, we offer
+                            many different kinds of airline tickets.</p>
+                    </div>
+                    <div class="item">
+                        <img src="./assets/images/why-at-04.png" class="img-fluid" alt="Queenstown ,New Zealand"
+                            loading="lazy" />
+                        <h3 class="air-ticketer-heading"> 100% satisfaction</h3>
+                        <p class="air-ticketer-subtext">Get assistance 24/7 on any kind of travel related query. We are
+                            happy to assist you.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container partner-section">
+            <div class="partner-wrapper">
+                <h1 class="top-heading">Our Airline <span class="first-text">Partners</span> </h1>
+                <p class="sub-text">Our partner is our main contractor, it will work at your bussiness plan to develop a
+                    custom offers and deals for you
+                </p>
+                <div class="owl-carousel partners-carousel">
+                    <div><img src="./assets/images/Catha-Pacific.png" class="img-fluid" alt="Queenstown ,New Zealand"
+                            loading="lazy" /></div>
+                    <div> <img src="./assets/images/qatak-airways.png" class="img-fluid" alt="Queenstown ,New Zealand"
+                            loading="lazy" /> </div>
+                    <div> <img src="./assets/images/Jet-Airways.webp" class="img-fluid" alt="Queenstown ,New Zealand"
+                            loading="lazy" /> </div>
+                    <div> <img src="./assets/images/singapore-airlines.png" class="img-fluid"
+                            alt="Queenstown ,New Zealand" loading="lazy" /> </div>
+                    <div> <img src="./assets/images/turkish-airline.png" class="img-fluid" alt="Queenstown ,New Zealand"
+                            loading="lazy" /> </div>
+                    <div> <img src="./assets/images/Catha-Pacific.png" class="img-fluid" alt="Queenstown ,New Zealand"
+                            loading="lazy" /> </div>
+                    <div> <img src="./assets/images/qatak-airways.png" class="img-fluid" alt="Queenstown ,New Zealand"
+                            loading="lazy" /> </div>
+                </div>
+            </div>
+
+        </section>
+        <footer class="footer-wrapper">
+            <section class="container footer-section">
+                <div class="footer-content">
+                    <div>
+                        <h3>Quick Lines</h3>
+                        <ul>
+                            <li><a href="#" target="_blank">Home</a></li>
+                            <li><a href="#" target="_blank">About Us</a></li>
+                            <li><a href="#" target="_blank">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Support & Help </h3>
+                        <ul>
+                            <li><a href="#" target="_blank">Privacy & Policy</a></li>
+                            <li><a href="#" target="_blank">FAQ</a></li>
+                            <li><a href="#" target="_blank">Refund Policy</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Partner with Us </h3>
+                        <ul>
+                            <li><a href="#" target="_blank">Become an Agent</a> </li>
+                            <li><a href="#" target="_blank">User Agreement</a></li>
+                            <li><a href="#" target="_blank">Testimonials</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Keep in Touch </h3>
+                        <ul class="social-media-div">
+                            <li>
+                                <div class="icon-wrapper ">
+                                    <a href="#" target="_blank">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-wrapper ">
+                                    <a href="#" target="_blank">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-wrapper ">
+                                    <a href="#" target="_blank">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-wrapper ">
+                                    <a href="#" target="_blank">
+                                        <i class="fab fa-youtube"></i>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-wrapper ">
+                                    <a href="#" target="_blank">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="contact-info-wrapper">
+                            <div class="chat-div">
+                                <i class="fas fa-comment-alt"></i>
+                            </div>
+                            <div>
+                                <p>24x7 Customer Support</p>
+                                <h3>1800-313-5699</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright-div-wrapper">
+                    <img src="./assets/images/logo-new.png" class="img-fluid" alt="logo" />
+                    <p class="mb-0">@ Copyright 2023 by Air Ticketer.<br /> All rights reserved.</p>
+                </div>
+            </section>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/js/all.min.js"
+        integrity="sha512-MNA4ve9aW825/nbJKWOW0eo0S5f2HWQYQEIw4TkgLYMgqk88gHpSHJuMkJhYMQWKE7LmJMBdJZMs5Ua19QbF8Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
